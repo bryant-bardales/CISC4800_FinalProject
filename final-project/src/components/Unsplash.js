@@ -5,16 +5,22 @@ const Unsplash = () => {
   const [img, setImg] = useState('');
 
   useEffect(() => {
-    fetch('${ REACT_APP_API } ${ REACT_APP_KEY }')
+    fetch(`${process.env.REACT_APP_API}${process.env.REACT_APP_KEY}`)
       .then(res => res.json())
-      .then(res => console.log(res))
+      .then(data => {
+        console.log(data);
+
+        setImg(data.urls.full);
+        document.body.style.backgroundImage = `url(${img})`;
+      })
   }, [])
 
   return (
-    <div>
-      <img src={img} alt="placeholder" />
-    </div>
-  );
+    <>
+      <div className="image-credits">Image by Unsplash</div>
+    </>
+  )
+    ;
 }
 
 export default Unsplash;

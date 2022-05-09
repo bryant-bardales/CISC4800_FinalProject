@@ -1,3 +1,10 @@
+# To-do App
+
+A simple to-do application for CISC 4800.
+
+### Screenshots
+![Desktop Screenshpt](./assets/screenshot-1.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

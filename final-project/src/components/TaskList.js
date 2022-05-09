@@ -9,7 +9,7 @@ function TaskList() {
   const [listItems, setlistItems] = useState(JSON.parse(localStorage.getItem('listItems')) || []);
 
   //Using useEffect hook for local storage. 
-  useEffect(() => {localStorage.setItem('listItems', JSON.stringify(listItems))}, [listItems]) 
+  useEffect(() => { localStorage.setItem('listItems', JSON.stringify(listItems)) }, [listItems])
 
   //Adding a task/item to the list and returns if it is not text.
   const addlistItem = listItem => {
@@ -52,15 +52,15 @@ function TaskList() {
   //Returns the Task Form along with a title for the page and 
   return (
     <>
-    <div className='list-context'>
-      <h1>What To Accomplish Today?</h1>
-      <TaskForm onSubmit={addlistItem} />
-      <Task
-        listItems={listItems}
-        completelistItem={completelistItem}
-        removelistItem={removelistItem}
-        updatelistItem={updatelistItem}
-      />
+      <div className='list-context'>
+        <h1>What to accomplish today?</h1>
+        <TaskForm onSubmit={addlistItem} />
+        <Task
+          listItems={listItems}
+          completelistItem={completelistItem}
+          removelistItem={removelistItem}
+          updatelistItem={updatelistItem}
+        />
       </div>
     </>
   );

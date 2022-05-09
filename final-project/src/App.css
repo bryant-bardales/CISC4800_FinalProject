@@ -7,24 +7,49 @@
 }
 
 body {
-  background: rgb(89,
-      89,
-      89);
-  /* Sets background color for the app behind the form itself */
+  background-color: #fafafa;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  position: relative !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.image-credits {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px;
+  z-index: 1;
+}
+
+.image-credits:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .todo-webapp {
-  /*Structures the background of the form which is in lightgrey color*/
+  /*Structures the background of the form which is in translucent white color*/
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 520px;
   min-height: 600px;
-  background: lightgrey;
+  background: rgba(255, 255, 255, 0.8);
   text-align: center;
-  margin: 200px auto;
   border-radius: 5px;
   padding-bottom: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
@@ -137,5 +162,17 @@ h1 {
 
   .listItem-row {
     width: 80%;
+  }
+
+  body {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    position: relative !important;
+  }
+
+  .image-credits {
+    display: none;
   }
 }

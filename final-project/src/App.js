@@ -6,12 +6,11 @@ import Unsplash from "./components/Unsplash"
 
 function App() {
   return (
-    //Imports the application to the App() function
     <>
       <div className='todo-webapp'>
         <TaskList />
-        <Unsplash />
       </div>
+      <Unsplash />
     </>
   );
 }
