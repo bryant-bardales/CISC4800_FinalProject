@@ -2,15 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans", sans-serif; /* Sets font for the web app */
+  font-family: "PT Sans", sans-serif;
+  /* Sets font for the web app */
 }
 
 body {
-  background: rgb(
-    89,
-    89,
-    89
-  ); /* Sets background color for the app behind the form itself */
+  background: rgb(89,
+      89,
+      89);
+  /* Sets background color for the app behind the form itself */
 }
 
 .todo-webapp {
@@ -28,22 +28,26 @@ body {
 }
 
 h1 {
-  margin: 25px 0; /* Edits the title of the todo web app*/
+  margin: 25px 0;
+  /* Edits the title of the todo web app*/
   color: black;
   font-size: 30px;
 }
 
 .complete {
-  text-decoration: line-through; /* Adds a strikthrough the text on the task/list item when completed/clicked on*/
+  text-decoration: line-through;
+  /* Adds a strikthrough the text on the task/list item when completed/clicked on*/
   opacity: 0.4;
 }
 
 .listItem-form {
-  margin-bottom: 25px; /* Sets some space between the task/list item and the bottom of the form*/
+  margin-bottom: 25px;
+  /* Sets some space between the task/list item and the bottom of the form*/
 }
 
 .listItem-input {
-  padding: 14px 32px 14px 16px; /* Styles the input box for the user to add task/items*/
+  padding: 14px 32px 14px 16px;
+  /* Styles the input box for the user to add task/items*/
   border-radius: 4px 0 0 4px;
   border: 2px solid blue;
   outline: none;
@@ -115,6 +119,7 @@ h1 {
 }
 
 @media (min-width: 320px) and (max-width: 650px) {
+
   /* Styles the application to be mobile friendly */
   .todo-webapp {
     margin: 0;
