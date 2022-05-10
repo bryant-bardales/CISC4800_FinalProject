@@ -4,8 +4,11 @@ const Unsplash = () => {
 
   const [img, setImg] = useState('');
 
+  const API = 'https://api.unsplash.com/photos/random/?client_id='
+  const KEY = 'O-TGWpqjLoj5Upmat-aYCuaB3bPKDxmib5mUwdwl8oU'
+
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API}${process.env.REACT_APP_KEY}`)
+    fetch(`${API}${KEY}`)
       .then(res => res.json())
       .then(data => {
         console.log(data);
