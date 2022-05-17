@@ -6,7 +6,7 @@ function TaskForm(props) {
 
   //Array that holds the declared state value of 'input' which is the current state and 'setInput' which is a function that will update it.
   //
-  const [input, setInput] = useState(props.edit ? props.edit.value : ''); 
+  const [input, setInput] = useState(props.edit ? props.edit.value : '');
 
   //variable autoFocus stores the useRef hook
   const autoFocus = useRef(null);
@@ -33,7 +33,7 @@ function TaskForm(props) {
   //Prevent webpage from refreshing when hitting the add task button aka prevents form returning to a default state
   const handleSubmit = e => {
     e.preventDefault();
-    
+
     //Used this function instead where a random number is generated for the id of each task/item added to the array. 
     //Causes no bugs. 
     props.onSubmit({
@@ -61,7 +61,7 @@ function TaskForm(props) {
       ) : (
         <>
           <input
-            placeholder='Add A Task'
+            placeholder='drop off package, clean up room...'
             value={input}
             onChange={handleChange}
             name='text'
