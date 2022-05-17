@@ -13,7 +13,7 @@ const Unsplash = () => {
       .then(data => {
         console.log(data);
 
-        setImg(data.urls.full);
+        setImg(data.urls.raw);
         document.body.style.backgroundImage = `url(${img})`;
       })
   }, [])
