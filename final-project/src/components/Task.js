@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import TaskForm from './TaskForm';
-import { RiCloseCircleLine } from 'react-icons/ri';
+import { RiCloseCircleLine, RiDeleteBackLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
+import { BsCardList } from 'react-icons/bs';
+import axios from "axios";
 
 //This component is the structure of the task/list item
 
@@ -42,8 +44,22 @@ const Task = ({ listItems, completelistItem, removelistItem, updatelistItem }) =
 
       {/*Sets and displays the icons taken from react-icons for delete and edit*/}
       <div className='icons'>
+
         <RiCloseCircleLine onClick={() => removelistItem(listItem.id)} className='remove-icon'/>
         <TiEdit onClick={() => setEdit({ id: listItem.id, value: listItem.text })} className='edit-icon'/>
+
+        <BsCardList onClick = {(e) => {
+          e.preventDefault();
+
+          let newTask = {
+            Time: listItem.time,
+            Task: listItem.text
+          }
+
+          axios.post('http://localhost:3002/savetask', newTask)
+        }
+        } className='save-icon'/>
+
       </div>
     </div>
   ));
