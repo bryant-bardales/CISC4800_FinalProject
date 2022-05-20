@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  /* Sets font for the web app */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: #fafafa;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  position: relative !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.image-credits {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px;
+  z-index: 1;
+}
+
+.image-credits:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.todo-webapp {
+  /*Structures the background of the form which is in translucent white color*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 520px;
+  min-height: 600px;
+  max-height: 600px;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  border-radius: 5px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+  overflow-y: auto;
+}
+
+h1 {
+  margin: 25px 0;
+  /* Edits the title of the todo web app*/
+  color: black;
+  font-size: 30px;
+}
+
+.complete {
+  text-decoration: line-through;
+  /* Adds a strikthrough the text on the task/list item when completed/clicked on*/
+  opacity: 0.4;
+}
+
+.listItem-form {
+  margin-bottom: 25px;
+  /* Sets some space between the task/list item and the bottom of the form*/
+}
+
+.listItem-input {
+  padding: 14px 32px 14px 16px;
+  /* Styles the input box for the user to add task/items*/
+  border-radius: 4px 0 0 4px;
+  border: 2px solid blue;
+  outline: none;
+  width: 320px;
+  background: black;
+  color: white;
+}
+
+.listItem-button {
+  /* Styles the Add Task button */
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: blue;
+  color: white;
+  text-transform: capitalize;
+}
+
+.listItem-input.edit {
+  /* When editing, the color changes to red for the input box */
+  border: 2px solid darkred;
+}
+
+.listItem-button.edit {
+  /* When editing, the color changes to red for the button */
+  background: darkred;
+  padding: 16px 22px;
+}
+
+.listItem-container {
+  /* Structures the container/box the form sits on */
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.listItem-row {
+  /* Styles the small box constructed around each task/list item */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: white;
+  background: rgb(9, 111, 0);
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.icons {
+  /* Styles the size of the icons for delete and edit */
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.remove-icon {
+  /* Styles the remove icon */
+  margin-right: 5px;
+  color: white;
+}
+
+.edit-icon {
+  /* Styles the edit icon */
+  color: white;
+}
+
+@media (min-width: 320px) and (max-width: 650px) {
+
+  /* Styles the application to be mobile friendly */
+  .todo-webapp {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+
+    max-height: fit-content;
+    overflow-x: hidden;
+  }
+
+  .list-context {
+    width: 100vw;
+  }
+
+  .listItem-input {
+    width: 240px;
+  }
+
+  .listItem-row {
+    width: 80%;
+  }
+
+  body {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    position: relative !important;
+  }
+
+  .image-credits {
+    display: none;
+  }
+
+}
+
+.order-button {
+  box-shadow: 3px 4px 0px 0px #899599;
+	background:linear-gradient(to bottom, #4a26e7 5%, #bab1ba 100%);
+	background-color:#37b0f7;
+	border-radius:15px;
+	border:1px solid #3c1ee4;
+	display:block;
+  float: right;
+	cursor:pointer;
+	color:#3a8a9e;
+	font-family:Arial;
+	font-size:13px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+
+.clockinfo {
+  display: block flex;
+  width: 520px;
+  height: 60px;
+  background-color: transparent;
+  text-align: right;
+  font: 3em sans-serif;
+  color: white;    
+  text-shadow: 0px 0px 15px #00FFFF,0px 0px 15px #00FFFF,0px 0px 15px #00FFFF;
+}
