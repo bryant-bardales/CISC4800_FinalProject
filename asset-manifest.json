@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CISC4800_FinalProject/static/css/main.c91db4d4.css",
+    "main.js": "/CISC4800_FinalProject/static/js/main.fdd102dc.js",
+    "index.html": "/CISC4800_FinalProject/index.html",
+    "main.c91db4d4.css.map": "/CISC4800_FinalProject/static/css/main.c91db4d4.css.map",
+    "main.fdd102dc.js.map": "/CISC4800_FinalProject/static/js/main.fdd102dc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c91db4d4.css",
+    "static/js/main.fdd102dc.js"
+  ]
+}
