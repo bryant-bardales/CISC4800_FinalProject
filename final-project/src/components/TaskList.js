@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import TaskForm from './TaskForm';
 import Task from './Task';
+<<<<<<< HEAD
+=======
+import axios from 'axios';
+>>>>>>> 385521e17a05da97f947aca104816c79726c6639
 
 function TaskList() {
 
@@ -49,9 +53,35 @@ function TaskList() {
     setlistItems(updatedlistItems);
   };
 
+<<<<<<< HEAD
   //Returns the Task Form along with a title for the page and 
   return (
     <>
+=======
+  //sort by alphabetical order
+  const sortlistItemsAlpha = text => {
+    const sortedlistItems = [...listItems].sort((a, b) => (a.text > b.text) ? 1 : -1);
+    setlistItems(sortedlistItems);
+  }
+
+  //sort by time order
+  const sortlistItemsTime = time => {
+    const sortedlistItems = [...listItems].sort((a, b) => (a.time > b.time) ? 1 : -1);
+    setlistItems(sortedlistItems);
+  }
+
+  //Returns the Task Form along with a title for the page and 
+  return (
+    <>
+      <div>
+        <button  className = "order-button" onClick={() => sortlistItemsAlpha(listItems.text)}>Alphabetical Order</button>
+      </div>
+
+      <div>
+        <button  className = "order-button" onClick={() => sortlistItemsTime(listItems.time)}>Time Order</button>
+      </div>
+
+>>>>>>> 385521e17a05da97f947aca104816c79726c6639
       <div className='list-context'>
         <h1>What to accomplish today?</h1>
         <TaskForm onSubmit={addlistItem} />

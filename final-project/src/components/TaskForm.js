@@ -38,7 +38,12 @@ function TaskForm(props) {
     //Causes no bugs. 
     props.onSubmit({
       id: Math.floor(Math.random() * 1000),
+<<<<<<< HEAD
       text: input
+=======
+      text: input,
+      time: ((new Date()).getMonth() + 1) + "/" + ((new Date()).getDate()) + " " + ((new Date()).getHours())+":"+((new Date()).getMinutes())+":"+((new Date()).getSeconds())
+>>>>>>> 385521e17a05da97f947aca104816c79726c6639
     });
     setInput('');
   };

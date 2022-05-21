@@ -82,6 +82,7 @@ h1 {
   padding: 14px 32px 14px 16px;
   /* Styles the input box for the user to add task/items*/
   border-radius: 4px 0 0 4px;
+<<<<<<< HEAD
   border: 2px solid black;
   outline: none;
   width: 320px;
@@ -91,6 +92,13 @@ h1 {
 
 ::placeholder {
   color: rgba(0, 0, 0, 0.5);
+=======
+  border: 2px solid blue;
+  outline: none;
+  width: 320px;
+  background: black;
+  color: white;
+>>>>>>> 385521e17a05da97f947aca104816c79726c6639
 }
 
 .listItem-button {
@@ -100,7 +108,11 @@ h1 {
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   outline: none;
+<<<<<<< HEAD
   background: black;
+=======
+  background: blue;
+>>>>>>> 385521e17a05da97f947aca104816c79726c6639
   color: white;
   text-transform: capitalize;
 }
@@ -155,8 +167,17 @@ h1 {
   color: white;
 }
 
+<<<<<<< HEAD
 @media (min-width: 320px) and (max-width: 650px) {
 
+=======
+.save-icon {
+  /* Styles the save icon */
+  color: white;
+}
+
+@media (min-width: 320px) and (max-width: 650px) {
+>>>>>>> 385521e17a05da97f947aca104816c79726c6639
   /* Styles the application to be mobile friendly */
   .todo-webapp {
     margin: 0;
@@ -190,5 +211,37 @@ h1 {
   .image-credits {
     display: none;
   }
+<<<<<<< HEAD
 
 }
+=======
+}
+
+.order-button {
+  box-shadow: 3px 4px 0px 0px #899599;
+  background: linear-gradient(to bottom, #4a26e7 5%, #bab1ba 100%);
+  background-color: #37b0f7;
+  border-radius: 15px;
+  border: 1px solid #3c1ee4;
+  display: block;
+  float: right;
+  cursor: pointer;
+  color: #3a8a9e;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 7px 25px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #e1e2ed;
+}
+
+.clockinfo {
+  display: block flex;
+  width: 520px;
+  height: 60px;
+  background-color: transparent;
+  text-align: right;
+  font: 3em sans-serif;
+  color: white;
+  text-shadow: 0px 0px 15px #00ffff, 0px 0px 15px #00ffff, 0px 0px 15px #00ffff;
+}
+>>>>>>> 385521e17a05da97f947aca104816c79726c6639

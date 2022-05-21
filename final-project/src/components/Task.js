@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import TaskForm from './TaskForm';
+<<<<<<< HEAD
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
+=======
+import { RiCloseCircleLine, RiDeleteBackLine } from 'react-icons/ri';
+import { TiEdit } from 'react-icons/ti';
+import { BsCardList } from 'react-icons/bs';
+import axios from "axios";
+>>>>>>> 385521e17a05da97f947aca104816c79726c6639
 
 //This component is the structure of the task/list item
 
@@ -36,10 +43,35 @@ const Task = ({ listItems, completelistItem, removelistItem, updatelistItem }) =
         {listItem.text}
       </div>
 
+<<<<<<< HEAD
       {/*Sets and displays the icons taken from react-icons for delete and edit*/}
       <div className='icons'>
         <RiCloseCircleLine onClick={() => removelistItem(listItem.id)} className='remove-icon'/>
         <TiEdit onClick={() => setEdit({ id: listItem.id, value: listItem.text })} className='edit-icon'/>
+=======
+      <div>
+        {listItem.time}
+      </div>
+
+      {/*Sets and displays the icons taken from react-icons for delete and edit*/}
+      <div className='icons'>
+
+        <RiCloseCircleLine onClick={() => removelistItem(listItem.id)} className='remove-icon'/>
+        <TiEdit onClick={() => setEdit({ id: listItem.id, value: listItem.text })} className='edit-icon'/>
+
+        <BsCardList onClick = {(e) => {
+          e.preventDefault();
+
+          let newTask = {
+            Time: listItem.time,
+            Task: listItem.text
+          }
+
+          axios.post('http://localhost:3002/savetask', newTask)
+        }
+        } className='save-icon'/>
+
+>>>>>>> 385521e17a05da97f947aca104816c79726c6639
       </div>
     </div>
   ));
