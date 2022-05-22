@@ -7,3 +7,4 @@ Group Proposal: https://docs.google.com/document/d/1jUMFTS8IgNGNZ84pWs3Ckic3Y8-w
 
 Group Timeline: https://docs.google.com/document/d/10bgSyVoza2F_w0_Ind43pw5N9DDAkAIOP4XOxIR7Kso/edit
 
+Deployed Project: https://bryant-bardales.github.io/CISC4800_FinalProject/
