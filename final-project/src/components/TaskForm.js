@@ -71,19 +71,23 @@ function TaskForm(props) {
           </button>
         </>
       ) : (
-        <>
-          <input
-            placeholder="drop off package, clean up room..."
-            value={input}
-            onChange={handleChange}
-            name="text"
-            ref={autoFocus}
-            className="listItem-input"
-          />
-          <button onClick={handleSubmit} className="listItem-button">
-            Add Task
-          </button>
-        </>
+        <div className="task-input-container">
+          <div className="task-input">
+            <input
+              placeholder="drop off package, clean up room..."
+              value={input}
+              onChange={handleChange}
+              name="text"
+              ref={autoFocus}
+              className="listItem-input"
+            />
+          </div>
+          <div>
+            <button onClick={handleSubmit} className="listItem-button">
+              Add Task
+            </button>
+          </div>
+        </div>
       )}
     </form>
   );
