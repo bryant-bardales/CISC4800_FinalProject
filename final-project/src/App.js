@@ -47,8 +47,8 @@ function App() {
   };
   return (
     <>
-    
-      <div className = 'clockinfo'><Clock /></div>
+
+      {/* <div className = 'clockinfo'><Clock /></div> */}
 
       <div>
         {user.name !== "" ? (
@@ -62,7 +62,7 @@ function App() {
       <div className="todo-webapp">
         <TaskList />
       </div>
-      <Unsplash /> 
+      <Unsplash />
 
     </>
   );

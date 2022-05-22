@@ -74,29 +74,23 @@ function TaskList() {
   //Returns the Task Form along with a title for the page and
   return (
     <>
-      <div>
-        <button
-          className="order-button"
-          onClick={() => sortlistItemsAlpha(listItems.text)}
-        >
-          Alphabetical Order
-        </button>
-        
-        <button
-          className="time-order"
-          onClick={() => sortlistItemsTime(listItems.time)}
-        >
-          Time Order
-        </button>
-      </div>
-
-      <div>
-        
-      </div>
-
       <div className="list-context">
         <h1>What to accomplish today?</h1>
+
         <TaskForm onSubmit={addlistItem} />
+        <div className="sort-container">
+          <button
+            className="order-button"
+            onClick={() => sortlistItemsAlpha(listItems.text)}>
+            Alphabetical Order
+          </button>
+
+          <button
+            className="time-order"
+            onClick={() => sortlistItemsTime(listItems.time)}>
+            Time Order
+          </button>
+        </div>
         <Task
           listItems={listItems}
           completelistItem={completelistItem}
