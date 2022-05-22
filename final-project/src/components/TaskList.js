@@ -81,15 +81,17 @@ function TaskList() {
         >
           Alphabetical Order
         </button>
-      </div>
-
-      <div>
+        
         <button
-          className="order-button"
+          className="time-order"
           onClick={() => sortlistItemsTime(listItems.time)}
         >
           Time Order
         </button>
+      </div>
+
+      <div>
+        
       </div>
 
       <div className="list-context">

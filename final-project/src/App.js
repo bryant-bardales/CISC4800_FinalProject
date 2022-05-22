@@ -6,6 +6,9 @@ import TaskList from "./components/TaskList";
 import Unsplash from "./components/Unsplash";
 import Login2 from "./components/Login";
 import Clock from "./components/Clock";
+import Navbar from "./components/Navbar"
+import Main from "./components/Main"
+
 
 function App() {
   var users = [
@@ -44,9 +47,11 @@ function App() {
   };
   return (
     <>
+    
       <div className = 'clockinfo'><Clock /></div>
+
       <div>
-        {user.name != "" ? (
+        {user.name !== "" ? (
           <div>
             hello {user.name} <button onClick={logout}>Logout</button>{" "}
           </div>
@@ -57,7 +62,8 @@ function App() {
       <div className="todo-webapp">
         <TaskList />
       </div>
-      <Unsplash />
+      <Unsplash /> 
+
     </>
   );
 }
