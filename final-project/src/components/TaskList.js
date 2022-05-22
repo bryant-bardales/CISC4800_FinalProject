@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import TaskForm from './TaskForm';
-import Task from './Task';
-<<<<<<< HEAD
-=======
-import axios from 'axios';
->>>>>>> 385521e17a05da97f947aca104816c79726c6639
+import React, { useState, useEffect } from "react";
+import TaskForm from "./TaskForm";
+import Task from "./Task";
+import axios from "axios";
 
 function TaskList() {
-
   //Array that holds the declared state value of 'listItems' which is the current state and 'setlistItems' which is a function that will update it.
   //Using local Storage to store the list items even when page is refreshed or closed out.
-  const [listItems, setlistItems] = useState(JSON.parse(localStorage.getItem('listItems')) || []);
+  const [listItems, setlistItems] = useState(
+    JSON.parse(localStorage.getItem("listItems")) || []
+  );
 
-  //Using useEffect hook for local storage. 
-  useEffect(() => { localStorage.setItem('listItems', JSON.stringify(listItems)) }, [listItems])
+  //Using useEffect hook for local storage.
+  useEffect(() => {
+    localStorage.setItem("listItems", JSON.stringify(listItems));
+  }, [listItems]);
 
   //Adding a task/item to the list and returns if it is not text.
-  const addlistItem = listItem => {
+  const addlistItem = (listItem) => {
     if (!listItem.text) {
       return;
     }
@@ -32,19 +32,21 @@ function TaskList() {
       return;
     }
 
-    setlistItems(prev => prev.map(item => (item.id === listItemId ? newValue : item)));
+    setlistItems((prev) =>
+      prev.map((item) => (item.id === listItemId ? newValue : item))
+    );
   };
 
   //Deleting a task/item on the list
-  const removelistItem = id => {
-    const removedItem = [...listItems].filter(listItem => listItem.id !== id);
+  const removelistItem = (id) => {
+    const removedItem = [...listItems].filter((listItem) => listItem.id !== id);
 
     setlistItems(removedItem);
   };
 
   //Completing a task/item on the list
-  const completelistItem = id => {
-    let updatedlistItems = listItems.map(listItem => {
+  const completelistItem = (id) => {
+    let updatedlistItems = listItems.map((listItem) => {
       if (listItem.id === id) {
         listItem.isComplete = !listItem.isComplete;
       }
@@ -53,36 +55,44 @@ function TaskList() {
     setlistItems(updatedlistItems);
   };
 
-<<<<<<< HEAD
-  //Returns the Task Form along with a title for the page and 
-  return (
-    <>
-=======
   //sort by alphabetical order
-  const sortlistItemsAlpha = text => {
-    const sortedlistItems = [...listItems].sort((a, b) => (a.text > b.text) ? 1 : -1);
+  const sortlistItemsAlpha = (text) => {
+    const sortedlistItems = [...listItems].sort((a, b) =>
+      a.text > b.text ? 1 : -1
+    );
     setlistItems(sortedlistItems);
-  }
+  };
 
   //sort by time order
-  const sortlistItemsTime = time => {
-    const sortedlistItems = [...listItems].sort((a, b) => (a.time > b.time) ? 1 : -1);
+  const sortlistItemsTime = (time) => {
+    const sortedlistItems = [...listItems].sort((a, b) =>
+      a.time > b.time ? 1 : -1
+    );
     setlistItems(sortedlistItems);
-  }
+  };
 
-  //Returns the Task Form along with a title for the page and 
+  //Returns the Task Form along with a title for the page and
   return (
     <>
       <div>
-        <button  className = "order-button" onClick={() => sortlistItemsAlpha(listItems.text)}>Alphabetical Order</button>
+        <button
+          className="order-button"
+          onClick={() => sortlistItemsAlpha(listItems.text)}
+        >
+          Alphabetical Order
+        </button>
       </div>
 
       <div>
-        <button  className = "order-button" onClick={() => sortlistItemsTime(listItems.time)}>Time Order</button>
+        <button
+          className="order-button"
+          onClick={() => sortlistItemsTime(listItems.time)}
+        >
+          Time Order
+        </button>
       </div>
 
->>>>>>> 385521e17a05da97f947aca104816c79726c6639
-      <div className='list-context'>
+      <div className="list-context">
         <h1>What to accomplish today?</h1>
         <TaskForm onSubmit={addlistItem} />
         <Task

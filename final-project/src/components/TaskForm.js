@@ -1,12 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
-//This component is the structure of the form the user will be using to add/edit the task/list items on the web app. 
+//This component is the structure of the form the user will be using to add/edit the task/list items on the web app.
 
 function TaskForm(props) {
-
   //Array that holds the declared state value of 'input' which is the current state and 'setInput' which is a function that will update it.
   //
-  const [input, setInput] = useState(props.edit ? props.edit.value : '');
+  const [input, setInput] = useState(props.edit ? props.edit.value : "");
 
   //variable autoFocus stores the useRef hook
   const autoFocus = useRef(null);
@@ -17,12 +16,12 @@ function TaskForm(props) {
   });
 
   //Function that sets the input to what the user adds/updates task from the list
-  const handleChange = e => {
+  const handleChange = (e) => {
     setInput(e.target.value);
   };
 
   // Attempted to construct a function where the id value of each task/list item constructed would be given in an increasing consecutive form
-  // but it caused bugs to the removelistItem and updatelistItem function. 
+  // but it caused bugs to the removelistItem and updatelistItem function.
 
   // const [id, setId] = useState(1);
   // const giveId = () =>{
@@ -31,49 +30,59 @@ function TaskForm(props) {
   // }
 
   //Prevent webpage from refreshing when hitting the add task button aka prevents form returning to a default state
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    //Used this function instead where a random number is generated for the id of each task/item added to the array. 
-    //Causes no bugs. 
+    //Used this function instead where a random number is generated for the id of each task/item added to the array.
+    //Causes no bugs.
     props.onSubmit({
       id: Math.floor(Math.random() * 1000),
-<<<<<<< HEAD
-      text: input
-=======
       text: input,
-      time: ((new Date()).getMonth() + 1) + "/" + ((new Date()).getDate()) + " " + ((new Date()).getHours())+":"+((new Date()).getMinutes())+":"+((new Date()).getSeconds())
->>>>>>> 385521e17a05da97f947aca104816c79726c6639
+      time:
+        new Date().getMonth() +
+        1 +
+        "/" +
+        new Date().getDate() +
+        " " +
+        new Date().getHours() +
+        ":" +
+        new Date().getMinutes() +
+        ":" +
+        new Date().getSeconds(),
     });
-    setInput('');
+    setInput("");
   };
 
-  //Constructs the form depending if we are adding a task/item to the list or updating it. 
+  //Constructs the form depending if we are adding a task/item to the list or updating it.
   return (
-    <form onSubmit={handleSubmit} className='listItem-form'>
+    <form onSubmit={handleSubmit} className="listItem-form">
       {props.edit ? (
         <>
           <input
-            placeholder='Update Your Task'
+            placeholder="Update Your Task"
             value={input}
             onChange={handleChange}
-            name='text'
+            name="text"
             ref={autoFocus}
-            className='listItem-input edit'
+            className="listItem-input edit"
           />
-          <button onClick={handleSubmit} className='listItem-button edit'>Update</button>
+          <button onClick={handleSubmit} className="listItem-button edit">
+            Update
+          </button>
         </>
       ) : (
         <>
           <input
-            placeholder='drop off package, clean up room...'
+            placeholder="drop off package, clean up room..."
             value={input}
             onChange={handleChange}
-            name='text'
+            name="text"
             ref={autoFocus}
-            className='listItem-input'
+            className="listItem-input"
           />
-          <button onClick={handleSubmit} className='listItem-button'>Add Task</button>
+          <button onClick={handleSubmit} className="listItem-button">
+            Add Task
+          </button>
         </>
       )}
     </form>

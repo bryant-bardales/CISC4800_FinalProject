@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import './App.css';
-
-import TaskList from "./components/TaskList"
-import Unsplash from "./components/Unsplash"
-
-function App() {
-  return (
-    <>
-      <div className='todo-webapp'>
-=======
 import React from "react";
 import "./App.css";
 import { useState } from "react";
@@ -67,7 +55,6 @@ function App() {
         )}
       </div>
       <div className="todo-webapp">
->>>>>>> 385521e17a05da97f947aca104816c79726c6639
         <TaskList />
       </div>
       <Unsplash />
@@ -75,8 +62,4 @@ function App() {
   );
 }
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> 385521e17a05da97f947aca104816c79726c6639
