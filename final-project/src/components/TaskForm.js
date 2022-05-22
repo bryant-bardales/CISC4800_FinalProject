@@ -57,19 +57,23 @@ function TaskForm(props) {
   return (
     <form onSubmit={handleSubmit} className="listItem-form">
       {props.edit ? (
-        <>
-          <input
-            placeholder="Update Your Task"
-            value={input}
-            onChange={handleChange}
-            name="text"
-            ref={autoFocus}
-            className="listItem-input edit"
-          />
-          <button onClick={handleSubmit} className="listItem-button edit">
-            Update
-          </button>
-        </>
+        <div className="task-input-container">
+          <div className="task-input">
+            <input
+              placeholder="update your task"
+              value={input}
+              onChange={handleChange}
+              name="text"
+              ref={autoFocus}
+              className="listItem-input warning edit"
+            />
+          </div>
+          <div>
+            <button onClick={handleSubmit} className="listItem-button edit">
+              Update
+            </button>
+          </div>
+        </div>
       ) : (
         <div className="task-input-container">
           <div className="task-input">

@@ -12,28 +12,26 @@ function Login({ Login, error }) {
         {error != "" ? <div>{error}</div> : ""}
         <div>
           <div>
-            <label className="name">Username</label>
-          </div>
-          <div>
             <input
               type="text"
               name="name"
               onChange={(e) => setDetails({ ...details, name: e.target.value })}
               value={details.name}
+              placeholder="Username"
+              className="login-input"
             />
           </div>
         </div>
 
         <div>
           <div>
-            <label className="pass">Password</label>
-          </div>
-          <div>
             <input
+              className="login-input"
               type="password"
               name="password"
               onChange={(e) => setDetails({ ...details, password: e.target.value })}
               value={details.password}
+              placeholder="Password"
             ></input>
           </div>
         </div>

@@ -36,6 +36,28 @@
   color: #fff;
 }
 
+.login-input {
+
+  outline: none;
+
+  background: #fff;
+  border-radius: 5px;
+  border: none;
+  color: #000;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  width: 100%;
+}
+
+.login-input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.login-input:focus {
+  outline: none;
+}
+
 .task-input-container {
   display: flex;
   flex-direction: row;
@@ -161,11 +183,6 @@ h1 {
   color: #fff;
 }
 
-.listItem-input.edit {
-  /* When editing, the color changes to red for the input box */
-  border: 2px solid darkred;
-}
-
 .listItem-button.edit {
   /* When editing, the color changes to red for the button */
   background: darkred;
@@ -253,25 +270,6 @@ h1 {
   }
 }
 
-.order-button {
-  box-shadow: 3px 4px 0px 0px #899599;
-  background: linear-gradient(to bottom, #4a26e7 5%, #bab1ba 100%);
-  background-color: #37b0f7;
-  border-radius: 15px;
-  border: 1px solid #3c1ee4;
-  display: block;
-  float: left;
-  cursor: pointer;
-  color: #3a8a9e;
-  font-family: Arial;
-  font-size: 13px;
-  padding: 7px 25px;
-  margin-top: 30px;
-  margin-left: 90px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #e1e2ed;
-}
-
 .clockinfo {
   display: block flex;
   width: 520px;
@@ -283,21 +281,35 @@ h1 {
   text-shadow: 0px 0px 15px #00ffff, 0px 0px 15px #00ffff, 0px 0px 15px #00ffff;
 }
 
-.time-order {
-  box-shadow: 3px 4px 0px 0px #899599;
-  background: linear-gradient(to bottom, #4a26e7 5%, #bab1ba 100%);
-  background-color: #37b0f7;
-  border-radius: 15px;
-  border: 1px solid #3c1ee4;
-  display: block;
-  float: right;
+.warning {
+  background-color: darkred !important;
+  color: white !important;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.order-button {
+  background: #fff;
+  border-radius: 5px;
+  border: none;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
   cursor: pointer;
-  color: #3a8a9e;
-  font-family: Arial;
-  font-size: 13px;
-  padding: 7px 25px;
-  margin-top: 30px;
-  margin-right: 120px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #e1e2ed;
+  padding: 14px 15px
+}
+
+.time-order {
+  background: #fff;
+  border-radius: 5px;
+  border: none;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 14px 15px
 }
