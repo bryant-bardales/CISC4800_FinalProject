@@ -12,7 +12,7 @@ function Clock() {
   }, []);
 
   return (
-    <div>{clockState}</div>
+    <>{clockState}</>
   )
 }
 

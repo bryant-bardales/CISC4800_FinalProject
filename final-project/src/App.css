@@ -253,6 +253,12 @@ h1 {
 @media (min-width: 320px) and (max-width: 650px) {
 
   /* Styles the application to be mobile friendly */
+
+  .clock-info {
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 100vw;
+  }
+
   .todo-webapp {
     margin: 0;
     height: 100vh;
@@ -298,12 +304,14 @@ h1 {
   }
 }
 
-.clockinfo {
-  display: block flex;
+.clock-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
   width: 520px;
   height: 60px;
-  background-color: transparent;
-  text-align: center;
   font: 3em sans-serif;
   color: white;
   text-shadow: 0px 0px 15px #00ffff, 0px 0px 15px #00ffff, 0px 0px 15px #00ffff;

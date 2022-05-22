@@ -48,7 +48,9 @@ function App() {
   return (
     <>
 
-      {/* <div className = 'clockinfo'><Clock /></div> */}
+      <div className='clock-info'>
+        <Clock />
+      </div>
 
       <div>
         {user.name !== "" ? (
